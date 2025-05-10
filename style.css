@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* we have to on the perspective to use the 3d effects that is z directon */
+    perspective: 10px;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.Background{
+    transform: translateZ(-40px) scale(5);
+}
+
+.Foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+.Background, .Foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* The css ovbject fit property is used to specify how an <img> or <video> should be resized to fit its container */
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1{
+    position: absolute;
+    font-size: 10rem;
+    top: 5rem;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0, 0, 10px rgba(0, 0, 0, 0.5);
+    font-family: "Poppins", sans-serif;
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem, 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateX(-50%);
+    color: black;
+    font-size: 3rem;
+    font-weight: 600;
+    /* transform: translateY(40) translateX(40%); */
+}
+
+.bg1{
+    background-image: url(Cycling.jpg);
+}
+
+.bg2{
+    background-image: url(Paragliding.jpg);
+}
+
+.bg3{
+    background-image: url(Surfing.jpg);
+}
+
+/* assignment
+1. what is the difference between img and background image in styling */
